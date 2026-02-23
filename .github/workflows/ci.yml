@@ -28,3 +28,10 @@ jobs:
         run: | 
           test -f build/index.html
           cat build/index.html | grep '<div id="root"></div>'
+      - name: Test Unitaire
+        run: npm run test
+      - name: Upload des rapports de test
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapports-html
+          path: ./reports/html/
