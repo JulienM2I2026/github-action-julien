@@ -26,5 +26,5 @@ jobs:
 
       - name: Vérification de la compilation
         run: | 
-          test -f dist/index.html
+          test -f build/index.html
           cat dist/index.html | grep '<div id="root"></div>'
